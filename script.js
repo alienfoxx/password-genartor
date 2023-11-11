@@ -1,4 +1,4 @@
-const passwordBox = document.querySelector("#password");
+const passwordBox = document.getElementById("password");
 const length = 12;
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXZ";
 const lowerCase = "abscdefghijklmnopqrstuvwxyz";
@@ -18,4 +18,9 @@ function createPassword(){
     password += allChars[Math.floor(Math.random() * allChars.length)]
  }
  passwordBox.value = password;
+}
+function copyPassword(){
+    passwordBox.select();
+    document.execCommand("copy");
+
 }
